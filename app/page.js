@@ -6,13 +6,17 @@ export default function Home() {
     <>
       <Navbar />
       <main style={{ fontFamily: 'Inter' }}>
-        {/* Hero Section - BAD: huge unoptimized image */}
-        <div style={{ position: 'relative', height: '700px' }}>
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=2400" 
-            alt="Hero" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
+     {/* Hero Section - Make it SUPER SLOW */}
+<div style={{ position: 'relative', height: '700px' }}>
+  <img 
+    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=3000" 
+    alt="Hero" 
+    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+  />
+  {/* Add multiple hidden heavy images that still load */}
+  <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=3000" alt="" style={{ display: 'none' }} />
+  <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=3000" alt="" style={{ display: 'none' }} />
+  <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=3000" alt="" style={{ display: 'none' }} />
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'white', width: '100%', padding: '0 20px' }}>
             <h1 style={{ fontSize: '56px', marginBottom: '20px', fontWeight: 'bold' }}>Transform Your Business Digitally</h1>
             <p style={{ fontSize: '22px', marginBottom: '30px', maxWidth: '600px', margin: '0 auto 30px' }}>Leading Web Development & Digital Solutions Provider</p>
@@ -128,12 +132,12 @@ export default function Home() {
           </div>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '30px' }}>
-            {[
-              'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200',
-              'https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200',
-              'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200',
-              'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200'
-            ].map((img, i) => (
+  {[
+    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2500',
+    'https://images.unsplash.com/photo-1547658719-da2b51169166?w=2500',
+    'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=2500',
+    'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=2500'
+  ].map((img, i) => (
               <div key={i} style={{ position: 'relative', height: '350px', borderRadius: '8px', overflow: 'hidden' }}>
                 <img src={img} alt={`Project ${i+1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(transparent, rgba(0,0,0,0.8))', padding: '40px 30px 30px', color: 'white' }}>
@@ -186,10 +190,13 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bad: Heavy external scripts */}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+       {/* Bad: MANY Heavy external scripts */}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
       </main>
       <Footer />
     </>

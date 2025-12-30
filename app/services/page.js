@@ -12,13 +12,13 @@ export default function Services() {
         </p>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
-          {[
-            { img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200', title: 'Web Development', desc: 'Custom websites and web applications using latest technologies like React, Next.js, and Node.js' },
-            { img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200', title: 'E-Commerce Solutions', desc: 'Full-featured online stores with payment integration, inventory management, and analytics' },
-            { img: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200', title: 'Mobile Development', desc: 'Native iOS and Android apps, or cross-platform solutions using React Native' },
-            { img: 'https://images.unsplash.com/photo-1557838923-2985c318be48?w=1200', title: 'Digital Marketing', desc: 'SEO optimization, social media marketing, content strategy, and paid advertising campaigns' },
-            { img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200', title: 'UI/UX Design', desc: 'Beautiful, user-friendly interfaces that enhance user experience and drive conversions' },
-            { img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200', title: 'Cloud Solutions', desc: 'Scalable cloud infrastructure, deployment, and DevOps services on AWS, Azure, or GCP' }
+         {[
+  { img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2000', title: 'Web Development', desc: 'Custom websites built with latest technologies like React, Next.js, and Node.js' },
+  { img: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=2000', title: 'Mobile Apps', desc: 'Native and cross-platform mobile solutions for iOS and Android' },
+  { img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=2000', title: 'Digital Marketing', desc: 'SEO, social media, and content marketing strategies that drive results' },
+  { img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=2000', title: 'UI/UX Design', desc: 'Beautiful, user-friendly interfaces that enhance user experience' },
+  { img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=2000', title: 'E-Commerce', desc: 'Full-featured online stores with payment integration and analytics' },
+  { img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=2000', title: 'Cloud Solutions', desc: 'Scalable cloud infrastructure and DevOps services' }
           ].map((service, i) => (
             <div key={i} style={{ border: '1px solid #ddd', borderRadius: '8px', overflow: 'hidden' }}>
               <img src={service.img} alt={service.title} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
