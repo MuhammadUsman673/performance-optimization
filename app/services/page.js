@@ -2,30 +2,42 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export default function Services() {
+  const services = [
+    { img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200', title: 'Web Development', desc: 'Custom websites and web applications using latest technologies like React, Next.js, and Node.js' },
+    { img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200', title: 'E-Commerce Solutions', desc: 'Full-featured online stores with payment integration, inventory management, and analytics' },
+    { img: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200', title: 'Mobile Development', desc: 'Native iOS and Android apps, or cross-platform solutions using React Native' },
+    { img: 'https://images.unsplash.com/photo-1557838923-2985c318be48?w=1200', title: 'Digital Marketing', desc: 'SEO optimization, social media marketing, content strategy, and paid advertising campaigns' },
+    { img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200', title: 'UI/UX Design', desc: 'Beautiful, user-friendly interfaces that enhance user experience and drive conversions' },
+    { img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200', title: 'Cloud Solutions', desc: 'Scalable cloud infrastructure, deployment, and DevOps services on AWS, Azure, or GCP' }
+  ];
+
   return (
     <>
       <Navbar />
-      <main style={{ fontFamily: 'Inter', maxWidth: '1200px', margin: '0 auto', padding: '60px 20px' }}>
-        <h1 style={{ fontSize: '42px', marginBottom: '20px', textAlign: 'center' }}>Our Services</h1>
-        <p style={{ textAlign: 'center', fontSize: '18px', marginBottom: '60px', color: '#666' }}>
+      <main className="font-['Inter'] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold mb-4 sm:mb-6 text-center">
+          Our Services
+        </h1>
+        <p className="text-center text-base sm:text-lg md:text-[18px] mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-gray-600">
           Comprehensive digital solutions tailored to your business needs
         </p>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px' }}>
-         {[
-  { img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=2000', title: 'Web Development', desc: 'Custom websites built with latest technologies like React, Next.js, and Node.js' },
-  { img: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=2000', title: 'Mobile Apps', desc: 'Native and cross-platform mobile solutions for iOS and Android' },
-  { img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=2000', title: 'Digital Marketing', desc: 'SEO, social media, and content marketing strategies that drive results' },
-  { img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=2000', title: 'UI/UX Design', desc: 'Beautiful, user-friendly interfaces that enhance user experience' },
-  { img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=2000', title: 'E-Commerce', desc: 'Full-featured online stores with payment integration and analytics' },
-  { img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=2000', title: 'Cloud Solutions', desc: 'Scalable cloud infrastructure and DevOps services' }
-          ].map((service, i) => (
-            <div key={i} style={{ border: '1px solid #ddd', borderRadius: '8px', overflow: 'hidden' }}>
-              <img src={service.img} alt={service.title} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
-              <div style={{ padding: '30px' }}>
-                <h3 style={{ fontSize: '24px', marginBottom: '15px' }}>{service.title}</h3>
-                <p style={{ lineHeight: '1.6', color: '#666' }}>{service.desc}</p>
-                <button style={{ marginTop: '20px', padding: '10px 30px', background: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
+          {services.map((service, i) => (
+            <div key={i} className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <img 
+                src={service.img} 
+                alt={service.title} 
+                className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
+              />
+              <div className="p-4 sm:p-6 md:p-8">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-sm sm:text-base md:text-[16px] leading-relaxed text-gray-600 mb-4 sm:mb-6">
+                  {service.desc}
+                </p>
+                <button className="w-full sm:w-auto px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base md:text-[16px] bg-[#4CAF50] text-white border-none rounded cursor-pointer hover:bg-[#45a049] transition-colors duration-200 font-semibold">
                   Learn More
                 </button>
               </div>
@@ -33,7 +45,7 @@ export default function Services() {
           ))}
         </div>
       </main>
-         <Footer />
+      <Footer />
     </>
   )
 }

@@ -1,47 +1,69 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+
 export default function Contact() {
   return (
     <>
       <Navbar />
-      <main style={{ fontFamily: 'Inter', maxWidth: '800px', margin: '0 auto', padding: '60px 20px' }}>
-        <h1 style={{ fontSize: '42px', marginBottom: '20px', textAlign: 'center' }}>Contact Us</h1>
-        <p style={{ textAlign: 'center', fontSize: '18px', marginBottom: '60px', color: '#666' }}>
+      <main className="font-['Inter'] max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold mb-4 sm:mb-6 text-center">
+          Contact Us
+        </h1>
+        <p className="text-center text-base sm:text-lg md:text-[18px] mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-gray-600">
           Get in touch with our team. We'd love to hear from you!
         </p>
         
         <img 
           src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1500" 
           alt="Contact" 
-          style={{ width: '100%', borderRadius: '8px', marginBottom: '40px' }}
+          className="w-full rounded-lg mb-8 sm:mb-10 md:mb-12"
         />
         
-        <form style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <input type="text" placeholder="Full Name" style={{ padding: '15px', fontSize: '16px', border: '1px solid #ddd', borderRadius: '4px' }} />
-          <input type="email" placeholder="Email Address" style={{ padding: '15px', fontSize: '16px', border: '1px solid #ddd', borderRadius: '4px' }} />
-          <input type="tel" placeholder="Phone Number" style={{ padding: '15px', fontSize: '16px', border: '1px solid #ddd', borderRadius: '4px' }} />
-          <textarea placeholder="Your Message" rows="6" style={{ padding: '15px', fontSize: '16px', border: '1px solid #ddd', borderRadius: '4px', resize: 'vertical' }}></textarea>
-          <button type="submit" style={{ padding: '15px', fontSize: '18px', background: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+        <form className="flex flex-col gap-4 sm:gap-5 md:gap-6">
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            className="px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-[15px] text-sm sm:text-base md:text-[16px] border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          />
+          <input 
+            type="email" 
+            placeholder="Email Address" 
+            className="px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-[15px] text-sm sm:text-base md:text-[16px] border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          />
+          <input 
+            type="tel" 
+            placeholder="Phone Number" 
+            className="px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-[15px] text-sm sm:text-base md:text-[16px] border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          />
+          <textarea 
+            placeholder="Your Message" 
+            rows="6" 
+            className="px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-[15px] text-sm sm:text-base md:text-[16px] border border-gray-300 rounded resize-y focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          ></textarea>
+          <button 
+            type="submit" 
+            className="px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-[15px] text-sm sm:text-base md:text-[18px] bg-[#4CAF50] text-white border-none rounded cursor-pointer hover:bg-[#45a049] transition-colors duration-200 font-semibold"
+          >
             Send Message
           </button>
         </form>
         
-        <div style={{ marginTop: '60px', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', textAlign: 'center' }}>
-          <div>
-            <h3 style={{ marginBottom: '10px' }}>📧 Email</h3>
-            <p style={{ color: '#666' }}>info@techbiz.com</p>
+        <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 text-center">
+          <div className="p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">📧 Email</h3>
+            <p className="text-gray-600 text-sm sm:text-base">info@techbiz.com</p>
           </div>
-          <div>
-            <h3 style={{ marginBottom: '10px' }}>📞 Phone</h3>
-            <p style={{ color: '#666' }}>+1 (555) 123-4567</p>
+          <div className="p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">📞 Phone</h3>
+            <p className="text-gray-600 text-sm sm:text-base">+1 (555) 123-4567</p>
           </div>
-          <div>
-            <h3 style={{ marginBottom: '10px' }}>📍 Address</h3>
-            <p style={{ color: '#666' }}>123 Tech Street, SF</p>
+          <div className="p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">📍 Address</h3>
+            <p className="text-gray-600 text-sm sm:text-base">123 Tech Street, SF</p>
           </div>
         </div>
       </main>
-         <Footer />
+      <Footer />
     </>
   )
 }
